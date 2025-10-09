@@ -13,22 +13,22 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "build": "tsup",
     "prepare": "npm run build",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Corbin-Bigler/logger-js.git"
+    "url": "git+https://github.com/corbin-bigler/logger-js.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/Corbin-Bigler/logger-js/issues"
+    "url": "https://github.com/corbin-bigler/logger-js/issues"
   },
-  "homepage": "https://github.com/Corbin-Bigler/logger-js#readme",
+  "homepage": "https://github.com/corbin-bigler/logger-js#readme",
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^24.6.2",
