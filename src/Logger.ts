@@ -104,10 +104,12 @@ export namespace Logger {
   export class Tagged {
     constructor(private readonly logger: Logger, readonly tag: string) {}
 
+    stream(level: LogLevel = LogLevel.DEBUG): AsyncIterable<Log> {
+      return this.logger.stream(this.tag, level);
+    }
     logMetadata(message: any, level: LogLevel, secure = false, metadata: Record<string, any> = {}) {
       this.logger.logMetadata(message, this.tag, level, secure, metadata);
     }
-
     log(message: any, level: LogLevel, secure = false) {
       logWithoutMetadata(this.logger, message, this.tag, level, secure);
     }
